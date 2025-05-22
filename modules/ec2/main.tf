@@ -23,10 +23,10 @@ data "aws_ami" "ami" {
 }
 
 resource "aws_instance" "ec2_instance" {
-  ami           = data.aws_ami.ami.id
-  #instance_type = "t3.micro"
+  ami             = data.aws_ami.ami.id
+  instance_type   = var.instance_type
 
   tags  = {
-    Name        = local.ec2_name
+    Name          = local.ec2_name
   }
 }

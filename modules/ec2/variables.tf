@@ -9,6 +9,11 @@ variable "basic_info" {
   default = null
 }
 
+variable "instance_type" {
+  description = "The SKU of the EC2 instance"
+  default     = "m5.large"
+}
+
 variable "ami_name" {
   description = "The Name (ID) of the AMI being passed in"
 }
