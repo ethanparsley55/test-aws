@@ -8,6 +8,11 @@ data "aws_ami" "ami" {
 
   filter {
     name        = "image-id"
+    values      = ["*"]
+  }
+
+  filter {
+    name        = "image-id"
     values      = ["${var.ami_id}"]
   }
 
