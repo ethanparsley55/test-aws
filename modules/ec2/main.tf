@@ -7,19 +7,19 @@ data "aws_ami" "ami" {
   #owners        = ["${var.ami_owner}"]
 
   filter {
-    name        = "name"
-    values      = ["${var.ami_name}"]
+    name        = "image-id"
+    values      = ["${var.ami_id}"]
   }
 
-  filter {
-    name        = "root-device-type"
-    values      = ["${var.ami_root_type}"]
-  }
+  # filter {
+  #   name        = "root-device-type"
+  #   values      = ["${var.ami_root_type}"]
+  # }
 
-  filter {
-    name        = "virtualization-type"
-    values      = ["${var.ami_virtualization_type}"]
-  }
+  # filter {
+  #   name        = "virtualization-type"
+  #   values      = ["${var.ami_virtualization_type}"]
+  # }
 }
 
 resource "aws_instance" "ec2_instance" {
