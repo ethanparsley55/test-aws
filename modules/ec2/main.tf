@@ -7,7 +7,7 @@ data "aws_ami" "ami" {
   #owners        = ["${var.ami_owner}"]
 
   filter {
-    name        = "image-id"
+    name        = "name"
     values      = ["*"]
   }
 
