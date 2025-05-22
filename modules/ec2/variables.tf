@@ -4,7 +4,6 @@ variable "basic_info" {
     application           = string
     environment           = string
     location              = string
-    resource_group_name   = string
     tags                  = map(string)
   })
   default = null
@@ -21,7 +20,6 @@ variable "ami_owner" {
 variable "ami_root_type" {
   description = "The Type of the Root Device of the AMI"
 }
-
 
 variable "ami_virtualization_type" {
   description = "The Type of the Virtualization of the AMI"
