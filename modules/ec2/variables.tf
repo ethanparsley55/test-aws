@@ -11,7 +11,6 @@ variable "basic_info" {
 
 variable "instance_type" {
   description = "The SKU of the EC2 instance"
-  default     = "m5.large"
 }
 
 variable "ami_name" {
