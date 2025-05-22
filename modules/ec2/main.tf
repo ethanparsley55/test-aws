@@ -4,7 +4,7 @@ locals {
 
 data "aws_ami" "ami" {
   most_recent   = true
-  owners        = "[${var.ami_owner}]"
+  owners        = ["${var.ami_owner}"]
 
   filter {
     name        = "name"
